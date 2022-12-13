@@ -1,0 +1,40 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@namespace PortfolioManagement.BlazorWebApp.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="~/crypto-master/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/crypto-master/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/crypto-master/css/themify-icons.css" />
+    <link rel="stylesheet" href="~/crypto-master/css/animate.css" />
+    <link rel="stylesheet" href="~/crypto-master/css/owl.carousel.css" />
+    <link rel="stylesheet" href="~/crypto-master/css/style.css" />
+</head>
+<body>
+    <app>
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
+    </app>
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            Bir hata meydana geldi. Lütfen sayfayı yenileyin.
+        </environment>
+        <environment include="Development">
+            Hata meydana geldi. Geliştirici konsolunu inceleyin.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+
+    <script src="_framework/blazor.server.js"></script>
+    <script src="~/crypto-master/js/jquery-3.2.1.min.js"></script>
+    <script src="~/crypto-master/js/owl.carousel.min.js"></script>
+    <script src="~/crypto-master/js/main.js"></script>
+</body>
+</html>

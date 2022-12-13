@@ -1,0 +1,238 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Microsoft.AspNetCore.Routing.Internal
+@model PortfolioManagement.MVC.ViewModels.PortfolioViewModel
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link href="~/css/bootstrap-chosen.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+<link href="~/css/portfolio.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js">
+</script>
+<script type="text/javascript">
+    $('#createPortfolioModal').on('shown.bs.modal',
+        function () {
+            $('#btnCreatePortfolio').trigger('focus');
+        });
+    $('#createTransactionModal').on('shown.bs.modal',
+        function () {
+            $('#btnCreateTransaction').trigger('focus');
+        });
+    $(function () {
+        $("#coins").select2();
+        console.log("gird");
+    });
+
+    function DdlChange(val) {
+
+        var selected = val;
+        console.log(selected);
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: '@Url.Action("GetCoinName", "Portfolio")',
+            data: { Id: selected },
+            success: function (response) {
+                var price = jQuery.parseJSON(response);
+                $("#txtPrice").val(price);
+            },
+            error: function (response) {
+                console.log("basarisiz");
+
+            }
+        });
+    }
+
+    function CalculateTotalAmount(val) {
+        var amount = $("#txtAmount").val();
+        var price = $("#txtPrice").val();
+        var totalAmount = amount * price;
+        $("#txtTotalAmount").val(totalAmount);
+    }
+</script>
+
+<button type="button" class="btn btn-dark btn-lg btn-block" id="btnCreatePortfolio" data-toggle="modal" data-target="#createPortfolioModal">Portföy Oluştur</button>
+@{
+    int counter = 0;
+
+    <div id="notebooks" ng-app="notebooks" ng-controller="NotebookListCtrl">
+        @foreach (var x in Model.UserPortfolioes)
+        {
+            @using (Html.BeginForm("Index", "Portfolio", new { id = x.Id, check = true }, FormMethod.Post))
+            {
+                <ul id="notebook_ul">
+                    <li>
+                        <button class="btn btn-white menu-title">name: @x.PortfolioName </button>
+                    </li>
+                </ul>
+            }
+            counter++;
+        }
+        <ul id="notebook_ul">
+            <li style="background-color:#FFD32E;">
+                <span style="background-color:#FFD32E;" class="btn btn-white menu-title">Number of portfolios: @counter </span>
+            </li>
+        </ul>
+    </div>
+}
+<div>
+    @if (Model.CheckPortfolioPartial == true)
+    {
+        <div class="container-fluid page-body-wrapper">
+            <div class="row col-md-12">
+                <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card position-relative">
+                        <div class="card-body" style="background-color:#FFD32E">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="tblWallet">
+
+                                    <h5>Mevcut Bakiye: @Model.CoinWallets.Select(x => x.TotalWelthOfWallet).FirstOrDefault()</h5>
+                                    <br />
+
+                                    <div>
+                                        <h2>Varlıkların </h2>
+                                        <button id="btnCreateTransaction" data-toggle="modal" data-target="#createTransactionModal" class="btn btn-dark" style="float: right; margin-bottom: 5px;">Yeni Ekle </button>
+                                    </div>
+
+                                    <br />
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Coin Adı</th>
+                                            <th scope="col">Coin Miktarı</th>
+                                            <th scope="col">Ortalama Alış Fiyatı</th>
+                                            <th scope="col">Sahip Olunan Toplam Coin Fiyatı</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var coins in Model.CoinWallets)
+                                        {
+                                            <tr>
+                                                <td id="tdCoinName"> @coins.CoinName</td>
+                                                <td> @coins.AmountOfCoin</td>
+                                                <td id="tdAvarageBuyPrice"> @coins.AvarageBuyPrice</td>
+                                                <td> @coins.TotalWelthOfCoin</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- işlem ekle modal -->
+                            <div class="modal fade" id="createTransactionModal" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">İşlem Ekle</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <ul class="nav nav-tabs" id="tabContent">
+                                                <li class="active"><a href="#buy" data-toggle="tab">Satın Al </a></li>
+                                                <li><a href="#sell" data-toggle="tab">&nbsp; Satış Yap  </a></li>
+                                                <li><a href="#transfer" data-toggle="tab">&nbsp; Transfer Et</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="buy">
+                                                    @using (Html.BeginForm("BeginTransaction", "Portfolio", FormMethod.Post))
+                                                    {
+                                                        <p style="color: black"><b>Coin Seçiniz</b></p>
+                                                        @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
+                                                (List<SelectListItem>) ViewBag.dgr, new {@class = "form-control", id = "buyCoins", @onchange = "DdlChange(this.value,this.id)"})
+
+                                                        <br />
+                                                        <p style="color: black"><b>Coin Fiyatı</b></p>
+                                                        @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new {@type = "text", @id = "txtPrice"})
+                                                        <p><b></b></p>
+                                                        <p style="color: black"><b>Adet</b></p>
+                                                        @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new {@type = "text", @id = "txtAmount", @onchange = "CalculateTotalAmount(this.value,this.id)"})
+                                                        <p><b></b></p>
+                                                        <p style="color: black"><b>Toplam Tutar</b></p>
+                                                        @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount, new {@type = "text", @id = "txtTotalAmount"})
+                                                        <button class="btn btn-primary" style="background-color:#FFD32E; color:black;">Satın Al</button>
+                                                    }
+                                                </div>
+                                                <div class="tab-pane" id="sell">
+                                                    @using (Html.BeginForm("SellTransaction", "Portfolio", FormMethod.Post))
+                                                    {
+                                                        <p style="color: black"><b>Coin Seçiniz</b></p>
+                                                        @*, @readonly = "readonly"*@
+                                                        @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
+                                                (List<SelectListItem>) ViewBag.dgr, new {@class = "form-control", id = "sellCoins", @onchange = "DdlChange(this.value,this.id)"})
+
+                                                        <br />
+                                                        <p style="color: black"><b>Coin Fiyatı</b></p>
+                                                        @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new {@type = "text", @id = "txtPriceSell"})
+
+                                                        <br />
+                                                        <p><b></b></p>
+                                                        <p style="color: black"><b>Adet</b></p>
+                                                        @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new {@type = "text", @id = "txtAmountSell", @onchange = "CalculateTotalAmount(this.value,this.id)"})
+                                                        <p><b></b></p>
+                                                        <p style="color: black"><b>Toplam Tutar</b></p>
+                                                        @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount, new {@type = "text", @id = "txtTotalAmountSell"})
+                                                        @*@Html.TextBoxFor(m => m.CreateTransactionDto.TransactionType, new { @Value = "4" })*@
+
+                                                        <p><b></b></p>
+                                                        <button class="btn btn-primary">Satış Yap</button>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div
+        </div>
+
+            }
+
+            <!-- portföy ekle -->
+            <div class="modal fade" id="createPortfolioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Portföy Oluştur</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="background-color: #FFD32E">
+                            @using (Html.BeginForm("CreatePortfolio", "Portfolio", FormMethod.Post))
+                            {
+                                <div class="form-sample">
+                                    <div class="form-group">
+                                        <p style="color: black"><b>Portföy İsmi</b></p>
+                                        @*@Html.LabelFor(x => x.createPortfolioDto.PortfolioName, new { @class = "form-control", TextWriter = "Portföy İsmi: " })*@
+                                        @Html.TextBoxFor(x => x.createPortfolioDto.PortfolioName, new {@class = "form-control"})
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" style="background-color: white; color: black">Oluştur</button>
+                            }
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Çıkış</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="~/js/chosen.jquery.js"></script>

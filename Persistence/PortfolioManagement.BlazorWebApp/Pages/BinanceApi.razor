@@ -1,0 +1,88 @@
+﻿@page "/"
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@using PortfolioManagement.Domain.Entities.API;
+@inject IHttpClientFactory ClientFactory
+
+<h1>Call web API from a Blazor Server Razor component</h1>
+@if (getBranchesError)
+{
+    <p>Unable to get branches from GitHub. Please try again later.</p>
+}
+else
+{
+    <section class="crypto-table">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="service-item">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Ad</th>
+                                    <th scope="col">Açılış Fiyatı</th>
+                                    <th scope="col">Fiyat Değişimi</th>
+                                    <th scope="col">Kapanış Fiyatı</th>
+                                    <th scope="col">Hacim Ağırlıklı Ortalama Fiyat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int i = 0;
+                                }
+                                @foreach (var coins in binanceApiCoins)
+                                {
+                                    if (i <= 30)
+                                    {
+                                        <tr>
+                                            <td scope="row">@coins.Symbol</td>
+                                            <td scope="row">@coins.OpenPrice</td>
+                                            <td scope="row">% @coins.Volume</td>
+                                            <td scope="row"> @coins.PrevClosePrice</td>
+                                            <td scope="row">@coins.WeightedAvgPrice</td>
+                                        </tr>
+                                    }
+                                    i++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+@code {
+    private IEnumerable<CryptoCurrency> binanceApiCoins = Array.Empty<CryptoCurrency>();
+    private bool getBranchesError;
+    private bool shouldRender;
+
+    protected override bool ShouldRender() => shouldRender;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get,
+            "https://api.binance.com/api/v3/ticker/24hr");
+
+        var client = ClientFactory.CreateClient();
+
+        var response = await client.SendAsync(request);
+
+        if (response.IsSuccessStatusCode)
+        {
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            binanceApiCoins = await JsonSerializer.DeserializeAsync
+                <IEnumerable<CryptoCurrency>>(responseStream);
+        }
+        else
+        {
+            getBranchesError = true;
+        }
+
+        shouldRender = true;
+    }
+
+}
+

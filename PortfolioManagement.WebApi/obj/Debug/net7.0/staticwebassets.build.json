@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Q1PjAa2KOlrm/p/4gP7KYWg3z8XJvANrDdEmmDpW0fI=",
+  "Source": "PortfolioManagement.WebApi",
+  "BasePath": "_content/PortfolioManagement.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

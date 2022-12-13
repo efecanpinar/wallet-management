@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model PortfolioManagement.Application.DTOs.UserAddDto
+@{
+}
+<link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/assets/css/userlogin.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Default form</h4>
+                                    <p class="card-description">
+                                        Basic form layout
+                                    </p>
+                                    @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+                                    {
+                                        <div class="form-sample">
+                                            <div class="form-group">
+                                                @Html.LabelFor(x => x.Name)
+                                                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(x => x.Surname)
+                                                @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(x => x.UserName)
+                                                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(x => x.UserPassword)
+                                                @Html.TextBoxFor(x => x.UserPassword, new { @class = "form-control", placeholder = "Parola", type = "Password" })
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-warning">Kayıt Ol</button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>

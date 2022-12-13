@@ -1,0 +1,245 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\css\\portfolio.css",
+      "PackagePath": "staticwebassets\\css\\portfolio.css"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\css\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\fonts\\Futura.woff",
+      "PackagePath": "staticwebassets\\fonts\\Futura.woff"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\icon-fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\icon-fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\icon-fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\icon-fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\icon-fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\icon-fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\icon-fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\icon-fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\icon-fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\icon-fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\icon-fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\icon-fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\about-img.png",
+      "PackagePath": "staticwebassets\\img\\about-img.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\appstore.png",
+      "PackagePath": "staticwebassets\\img\\appstore.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\comment\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\comment\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\comment\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\comment\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\blog\\comment\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\comment\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\hero-bg.png",
+      "PackagePath": "staticwebassets\\img\\hero-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\laptop.png",
+      "PackagePath": "staticwebassets\\img\\laptop.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\map-marker.png",
+      "PackagePath": "staticwebassets\\img\\map-marker.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\member\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\member\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\member\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\member\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\member\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\member\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\member\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\member\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\member\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\member\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\page-info-bg.png",
+      "PackagePath": "staticwebassets\\img\\page-info-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\playstore.png",
+      "PackagePath": "staticwebassets\\img\\playstore.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\process-icons\\1.png",
+      "PackagePath": "staticwebassets\\img\\process-icons\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\process-icons\\2.png",
+      "PackagePath": "staticwebassets\\img\\process-icons\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\process-icons\\3.png",
+      "PackagePath": "staticwebassets\\img\\process-icons\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\process-line.png",
+      "PackagePath": "staticwebassets\\img\\process-line.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\quote.png",
+      "PackagePath": "staticwebassets\\img\\quote.png"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\review\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\review\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\review\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\review\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\img\\review\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\review\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\js\\jquery-3.2.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.2.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\js\\map.js",
+      "PackagePath": "staticwebassets\\js\\map.js"
+    },
+    {
+      "Id": "C:\\Users\\efeca\\OneDrive\\Desktop\\wallet-management\\PortfolioManagement\\MVC\\PortfolioManagement.MVC\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.PortfolioManagement.MVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.PortfolioManagement.MVC.props",
+      "PackagePath": "build\\PortfolioManagement.MVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.PortfolioManagement.MVC.props",
+      "PackagePath": "buildMultiTargeting\\PortfolioManagement.MVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.PortfolioManagement.MVC.props",
+      "PackagePath": "buildTransitive\\PortfolioManagement.MVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
